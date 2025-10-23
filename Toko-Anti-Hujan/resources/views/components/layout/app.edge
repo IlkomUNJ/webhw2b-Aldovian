@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <title>{{ title || 'Home' }}</title>
+
+  @vite(['resources/css/app.css'])
+  @vite(['resources/js/app.js'])
+  @if ($slots.meta)
+    {{{ await $slots.meta() }}}
+  @endif
+
+</head>
+<body>
+    @include('partials/header')
+    {{{ await $slots.main() }}}
+    @include('partials/footer')
+</body>
+</html>

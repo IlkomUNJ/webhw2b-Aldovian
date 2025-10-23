@@ -1,0 +1,39 @@
+@layout.app({title: 'bundling'})
+@slot('main')
+<main class="produk-detail">
+    <img src="gambar/bundling.jpg" alt="Bundling" class="detail-img" id="product-image">
+    <div class="detail-info">
+      <h2 id="product-name">Paket Bundling Payung + Jas Hujan + Sepatu Boots</h2>
+      <p>Paket hemat berisi payung lipat, jas hujan premium, dan sepatu boots cocok untuk segala cuaca.</p>
+      <p class="harga">Rp 140.000</p>
+      
+      <div class="quantity-selector">
+        <label for="quantity-input">Jumlah:</label>
+        <button class="btn-icon btn-qty-minus" id="btn-qty-minus" type="button">-</button>
+        <input type="number" id="quantity-input" value="1" min="1">
+        <button class="btn-icon btn-qty-plus" id="btn-qty-plus" type="button">+</button>
+      </div>
+
+      <div class="detail-actions">
+        <a href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20membeli%20Bundling" class="btn-beli">Beli Sekarang</a>
+        <a href="#" class="btn-icon" id="btn-add-wishlist" title="Tambah ke Wishlist">
+            <i class="far fa-heart"></i>
+        </a>
+        <a href="#" class="btn-icon" id="btn-add-cart" title="Tambah ke Keranjang">
+            <i class="fas fa-shopping-basket"></i>
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  <div id="modal-overlay" class="hidden"></div>
+  <div id="popup-modal" class="hidden">
+      <button id="modal-close-btn">&times;</button>
+      <h3 id="modal-title"></h3>
+      <div class="modal-product-info">
+          <img src="" alt="Produk" id="modal-product-image">
+          <p id="modal-product-name"></p>
+      </div>
+       </div>
+@endslot
+@end

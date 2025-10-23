@@ -1,0 +1,38 @@
+@layout.app({title:'produk'}) 
+@slot('main')
+    <main>
+    <h2>Semua Produk</h2>
+    <p>Temukan perlengkapan anti hujan terbaik untuk Anda.</p>
+    
+    <div class="filter-container">
+      <input type="text" placeholder="Cari produk..." class="search-bar">
+      <select class="filter-select">
+        <option value="">Filter Kategori</option>
+        <option value="payung">Payung</option>
+        <option value="jas-hujan">Jas Hujan</option>
+        <option value="bundling">Bundling</option>
+      </select>
+    </div>
+
+    <div class="produk-grid">
+      <a href="/payung" class="produk-item">
+        <img src="gambar/payung.jpg" alt="Payung">
+        <h3>Payung Lipat</h3>
+        <p class="harga">Rp 55.000</p>
+      </a>
+      
+      <a href="/jas" class="produk-item">
+        <img src="gambar/jas.jpg" alt="Jas Hujan">
+        <h3>Jas Hujan Premium</h3>
+        <p class="harga">Rp 68.000</p>
+      </a>
+      
+      <a href="/bundling" class="produk-item">
+        <img src="gambar/bundling.jpg" alt="Bundling">
+        <h3>Paket Bundling</h3>
+        <p class="harga">Rp 140.000</p>
+      </a>
+    </div>
+  </main>
+@endslot
+@end
